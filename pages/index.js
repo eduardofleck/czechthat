@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,15 +15,19 @@ export default function Home() {
         <h1 className={styles.title}>Welcome to Czech that!</h1>
 
         <div className={styles.grid}>
-          <a href="/phrases/generator" className={styles.card}>
-            <h2>Phrases Generator</h2>
-            <p>Put together words and form phrases!</p>
-          </a>
+          <Link href="/phrases/generator" passHref>
+            <div className={styles.card}>
+              <h2>Phrases Generator</h2>
+              <p>Put together words and form phrases!</p>
+            </div>
+          </Link>
 
-          <a href="/verbs/list" className={styles.card}>
-            <h2>Verbs List</h2>
-            <p>List of verbs conjugated</p>
-          </a>
+          <Link href="/verbs/list" passHref>
+            <div className={styles.card}>
+              <h2>Verbs List</h2>
+              <p>List of verbs conjugated</p>
+            </div>
+          </Link>
         </div>
       </main>
 
