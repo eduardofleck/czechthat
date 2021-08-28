@@ -22,7 +22,7 @@
     "they": "rozumějí"
   },
   {
-    "verb": "Understand",
+    "verb": "Sit",
     "infinitiv": "Sedět",
     "group": "et",
     "i": "sedím",
@@ -31,5 +31,27 @@
     "youFormal": "sedíte",
     "heShe": "sedí",
     "they": "sedí"
+  },
+  {
+    "verb": "Study",
+    "infinitiv": "Studovat",
+    "group": "ovat",
+    "i": "studuju",
+    "we": "studujeme",
+    "you": "studuješ",
+    "youFormal": "studujete",
+    "heShe": "studuje",
+    "they": "studují"
+  },
+  {
+    "verb": "Study",
+    "infinitiv": "Dát si",
+    "group": "at",
+    "i": "Dám si",
+    "we": "dáme si",
+    "you": "Dáš si",
+    "youFormal": "dáte si",
+    "heShe": "Dá si",
+    "they": "dají si"
   }
 ]

@@ -1,32 +1,94 @@
 import React from "react";
 import VerbsData from "../data/verbs.json";
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  cardRoot: {
+    padding: 5,
+    width: 400,
+  },
+  tableRoot: {
+    width: "100%",
+    // border: "1px solid black",
+  },
+});
+
 function VerbsList() {
-  var [etVerbs, setEtVerbs] = React.useState(VerbsData);
+  var [etVerbs, setEtVerbs] = React.useState([]);
+  var [ovatVerbs, setOvatVerbs] = React.useState([]);
+  var [atVerbs, setAtVerbs] = React.useState([]);
+
+  React.useEffect(() => {
+    let etGroup = [];
+    let ovatGroup = [];
+    let atGroup = [];
+
+    VerbsData.forEach((verb) => {
+      if (verb.group === "et") etGroup.push(verb);
+      if (verb.group === "ovat") ovatGroup.push(verb);
+      if (verb.group === "at") atGroup.push(verb);
+    });
+
+    setEtVerbs(etGroup);
+    setOvatVerbs(ovatGroup);
+    setAtVerbs(atGroup);
+  }, []);
+  const classes = useStyles();
 
   let drawVerbBox = (verb, index) => {
     return (
-      <div>
-        <div>
-          <h1>{verb.infinitiv}</h1> <h4>({verb.verb})</h4>
-        </div>
-
-        <ul key={index}>
-          <li key={"I_" + index}>Já {verb.i}</li>
-          <li key={"WE_" + index}>My {verb.we}</li>
-          <li key={"YOU_" + index}>Ty {verb.you}</li>
-          <li key={"YOU_FORMAL_" + index}>Vy {verb.youFormal}</li>
-          <li key={"HE_SHE_" + index}>On/Ona {verb.heShe}</li>
-          <li key={"THEY_" + index}>Oni {verb.they}</li>
-        </ul>
-      </div>
+      <Card key={index}>
+        <CardContent>
+          <Typography variant="h4">{verb.infinitiv}</Typography>
+          <Typography color="textSecondary">{verb.verb}</Typography>
+          <table className={classes.tableRoot}>
+            <tr>
+              <td>
+                <Typography variant="subtitle1">Já {verb.i}</Typography>
+              </td>
+              <td>
+                <Typography variant="subtitle1">Vy {verb.youFormal}</Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Typography variant="subtitle1">My {verb.we}</Typography>
+              </td>
+              <td>
+                <Typography variant="subtitle1">On/Ona {verb.heShe}</Typography>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <Typography variant="subtitle1">Ty {verb.you}</Typography>
+              </td>
+              <td>
+                <Typography variant="subtitle1">Oni {verb.they}</Typography>
+              </td>
+            </tr>
+          </table>
+        </CardContent>
+      </Card>
     );
   };
 
   return (
     <div>
-      <h1>Group ET,ĚT,IT </h1>
+      <Typography variant="h4">Group ET,ĚT,IT</Typography>
       {Array.from(etVerbs, (e, i) => {
-        return drawVerbBox(e, i);
+        return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
+      })}
+      <Typography variant="h4">Group OVAT</Typography>
+      {Array.from(ovatVerbs, (e, i) => {
+        return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
+      })}
+      <Typography variant="h4">Group AT</Typography>
+      {Array.from(ovatVerbs, (e, i) => {
+        return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
       })}
     </div>
   );
