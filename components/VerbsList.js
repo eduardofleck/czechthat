@@ -1,41 +1,7 @@
 import React from "react";
-
+import VerbsData from "../data/verbs.json";
 function VerbsList() {
-  var [etVerbs, setEtVerbs] = React.useState([
-    {
-      verb: "To live",
-      infinitiv: "Bydlet",
-      group: "et",
-      i: "bydlím",
-      we: "bydlíme",
-      you: "bydlíš",
-      youFormal: "bydlíte",
-      heShe: "bydlí",
-      they: "bydlí",
-    },
-    {
-      verb: "Understand",
-      infinitiv: "Rozumět",
-      group: "et",
-      i: "rozumím",
-      we: "rozumíme",
-      you: "rozumíš",
-      youFormal: "rozumíte",
-      heShe: "rozumí",
-      they: "rozumějí",
-    },
-    {
-      verb: "Understand",
-      infinitiv: "Sedět",
-      group: "et",
-      i: "sedím",
-      we: "sedíme",
-      you: "sedíš",
-      youFormal: "sedíte",
-      heShe: "sedí",
-      they: "sedí",
-    },
-  ]);
+  var [etVerbs, setEtVerbs] = React.useState(VerbsData);
 
   let drawVerbBox = (verb, index) => {
     return (
