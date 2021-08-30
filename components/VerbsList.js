@@ -5,6 +5,8 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
+import { normalizeRepeatedSlashes } from "next/dist/shared/lib/utils";
+import { Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
   cardRoot: {
@@ -14,6 +16,17 @@ const useStyles = makeStyles({
   tableRoot: {
     width: "100%",
     // border: "1px solid black",
+  },
+  groupGrid: {
+    display: "grid",
+    gridAutoFlow: "row",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    columnGap: 1,
+    // border: "1px solid black",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    justifyItems: "center",
   },
 });
 
@@ -78,18 +91,30 @@ function VerbsList() {
 
   return (
     <div>
-      <Typography variant="h4">Group ET,ĚT,IT</Typography>
-      {Array.from(etVerbs, (e, i) => {
-        return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
-      })}
-      <Typography variant="h4">Group OVAT</Typography>
-      {Array.from(ovatVerbs, (e, i) => {
-        return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
-      })}
-      <Typography variant="h4">Group AT</Typography>
-      {Array.from(ovatVerbs, (e, i) => {
-        return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
-      })}
+      <Typography variant="h4" align="center">
+        Group ET,ĚT,IT
+      </Typography>
+      <div className={classes.groupGrid}>
+        {Array.from(etVerbs, (e, i) => {
+          return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
+        })}
+      </div>
+      <Typography variant="h4" align="center">
+        Group OVAT
+      </Typography>
+      <div className={classes.groupGrid}>
+        {Array.from(ovatVerbs, (e, i) => {
+          return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
+        })}
+      </div>
+      <Typography variant="h4" align="center">
+        Group AT
+      </Typography>
+      <div className={classes.groupGrid}>
+        {Array.from(ovatVerbs, (e, i) => {
+          return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
+        })}
+      </div>
     </div>
   );
 }
