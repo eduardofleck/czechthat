@@ -30,7 +30,7 @@ export default function Template(props) {
           <Typography variant="h6">Czech that!</Typography>
         </Link>
       </div>
-      <div>{props.children}</div>
+      <div className={styles.content}>{props.children}</div>
       <footer className={styles.footer}>
         <div>
           <div>Powered by Immigrants</div>
