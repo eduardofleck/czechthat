@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Czech that</title>
         <link rel="icon" href="/favicon.ico" />
@@ -30,17 +30,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <div>
-          <div>Powered by Immigrants</div>
-          <div>
-            <a href="https://github.com/eduardofleck/czechthat">
-              Github project
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
