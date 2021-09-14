@@ -28,6 +28,13 @@ export default function Home() {
               <p>List of verbs conjugated</p>
             </div>
           </Link>
+
+          <Link href="/vocabulary/discover" passHref>
+            <div className={styles.card}>
+              <h2>Vocabulary</h2>
+              <p>Navigate in categories and pictures to discover more words!</p>
+            </div>
+          </Link>
         </div>
       </main>
     </div>

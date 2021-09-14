@@ -34,21 +34,25 @@ function VerbsList() {
   var [etVerbs, setEtVerbs] = React.useState([]);
   var [ovatVerbs, setOvatVerbs] = React.useState([]);
   var [atVerbs, setAtVerbs] = React.useState([]);
+  var [irregularVerbs, setIrregularVerbs] = React.useState([]);
 
   React.useEffect(() => {
     let etGroup = [];
     let ovatGroup = [];
     let atGroup = [];
+    let irregularGroup = [];
 
     VerbsData.forEach((verb) => {
       if (verb.group === "et") etGroup.push(verb);
       if (verb.group === "ovat") ovatGroup.push(verb);
       if (verb.group === "at") atGroup.push(verb);
+      if (verb.group === "irregular") irregularGroup.push(verb);
     });
 
     setEtVerbs(etGroup);
     setOvatVerbs(ovatGroup);
     setAtVerbs(atGroup);
+    setIrregularVerbs(irregularGroup);
   }, []);
   const classes = useStyles();
 
@@ -111,7 +115,15 @@ function VerbsList() {
         Group AT
       </Typography>
       <div className={classes.groupGrid}>
-        {Array.from(ovatVerbs, (e, i) => {
+        {Array.from(atVerbs, (e, i) => {
+          return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
+        })}
+      </div>
+      <Typography variant="h4" align="center">
+        Irregulars
+      </Typography>
+      <div className={classes.groupGrid}>
+        {Array.from(irregularVerbs, (e, i) => {
           return <div className={classes.cardRoot}>{drawVerbBox(e, i)}</div>;
         })}
       </div>

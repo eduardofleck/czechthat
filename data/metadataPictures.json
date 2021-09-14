@@ -1,0 +1,88 @@
+[
+  {
+    "picture": "dog.jpg",
+    "categories": ["animals"],
+    "words": [
+      {
+        "english": "Dog",
+        "czech": "Pes"
+      },
+      {
+        "english": "Dog",
+        "czech": "Zvíře"
+      }
+    ],
+    "info": "Sebastian the dog (https://www.instagram.com/sebastian.chunkydog/), Prague 2021 - Eduardo Fleck"
+  },
+  {
+    "picture": "cat.jpg",
+    "categories": ["animals"],
+    "words": [
+      {
+        "english": "Cat",
+        "czech": "Kočka"
+      },
+      {
+        "english": "Dog",
+        "czech": "Zvíře"
+      }
+    ],
+    "info": "Bobafett the cat, Prague 2021"
+  },
+  {
+    "picture": "pivo.jpg",
+    "categories": ["food and drinks"],
+    "words": [
+      {
+        "english": "Beer",
+        "czech": "Pivo"
+      },
+      {
+        "english": "Pilsner Urquell",
+        "czech": "Pilsner Urquell"
+      }
+    ],
+    "info": "Pislner Urquell at festival, Prague 2021"
+  },
+  {
+    "picture": "Bridge.jpg",
+    "categories": ["city"],
+    "words": [
+      {
+        "english": "Bridge",
+        "czech": "Most"
+      },
+      {
+        "english": "River",
+        "czech": "řeka"
+      },
+      {
+        "english": "Charles Bridge",
+        "czech": "Karlův most"
+      }
+    ],
+    "info": "Karlův most, Prague, winter 2021"
+  },
+  {
+    "picture": "Tram.jpg",
+    "categories": ["city"],
+    "words": [
+      {
+        "english": "Tram",
+        "czech": "Tramvaj"
+      }
+    ],
+    "info": "Christmas tram, Prague, december 2021"
+  },
+  {
+    "picture": "iceCream.jpg",
+    "categories": ["food and drinks"],
+    "words": [
+      {
+        "english": "Ice Cream",
+        "czech": "Zmrzlina"
+      }
+    ],
+    "info": "Ice cream at Ice cream festivel, Holešovice, Prague 2021"
+  }
+]

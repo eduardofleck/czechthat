@@ -53,5 +53,16 @@
     "youFormal": "dáte si",
     "heShe": "Dá si",
     "they": "dají si"
+  },
+  {
+    "verb": "to go - walk",
+    "infinitiv": "jít",
+    "group": "irregular",
+    "i": "jdu",
+    "we": "jdeme",
+    "you": "jdeš",
+    "youFormal": "jdete",
+    "heShe": "Jde",
+    "they": "jdou"
   }
 ]
