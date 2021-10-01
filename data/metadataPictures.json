@@ -1,6 +1,6 @@
 [
   {
-    "picture": "dog.jpg",
+    "picture": "dog.jpeg",
     "categories": ["animals"],
     "words": [
       {
@@ -12,10 +12,10 @@
         "czech": "Zvíře"
       }
     ],
-    "info": "Sebastian the dog (https://www.instagram.com/sebastian.chunkydog/), Prague 2021 - Eduardo Fleck"
+    "info": "@sebastian.chunkydog, Prague 2021"
   },
   {
-    "picture": "cat.jpg",
+    "picture": "cat.jpeg",
     "categories": ["animals"],
     "words": [
       {
@@ -27,10 +27,10 @@
         "czech": "Zvíře"
       }
     ],
-    "info": "Bobafett the cat, Prague 2021"
+    "info": "Bobafett the cat, Prague 2019"
   },
   {
-    "picture": "pivo.jpg",
+    "picture": "pivo.jpeg",
     "categories": ["food and drinks"],
     "words": [
       {
@@ -42,10 +42,10 @@
         "czech": "Pilsner Urquell"
       }
     ],
-    "info": "Pislner Urquell at festival, Prague 2021"
+    "info": "Pislner Urquell beer at music festival, Prague 2021"
   },
   {
-    "picture": "Bridge.jpg",
+    "picture": "Bridge.jpeg",
     "categories": ["city"],
     "words": [
       {
@@ -64,7 +64,7 @@
     "info": "Karlův most, Prague, winter 2021"
   },
   {
-    "picture": "Tram.jpg",
+    "picture": "Tram.jpeg",
     "categories": ["city"],
     "words": [
       {
@@ -75,7 +75,7 @@
     "info": "Christmas tram, Prague, december 2021"
   },
   {
-    "picture": "iceCream.jpg",
+    "picture": "iceCream.jpeg",
     "categories": ["food and drinks"],
     "words": [
       {

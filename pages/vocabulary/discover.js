@@ -2,9 +2,11 @@ import React from "react";
 import Chip from "@material-ui/core/Chip";
 import metadataPictures from "../../data/metadataPictures.json";
 import styles from "../../styles/Home.module.css";
+import DoneIcon from "@material-ui/icons/Done";
 
 function Discover() {
   var [categories, setCategories] = React.useState([]);
+  var [pictures, setPictures] = React.useState([]);
 
   React.useEffect(() => {
     let categoriesList = [];
@@ -16,36 +18,87 @@ function Discover() {
         });
 
         if (!categorieInList) {
-          categoriesList.push({ categorie: cat, selected: false });
+          categoriesList.push({
+            categorie: cat,
+            selected: true,
+            color: "primary",
+          });
         }
       });
     });
-
+    setPictures(metadataPictures);
     setCategories(categoriesList);
   }, []);
 
   const handleClick = (e) => {
-    console.info("You clicked the Chip ");
-    console.info(e.target.dataset["categorie"]);
+    var categoriesCopy = categories;
+
+    categoriesCopy.forEach((cat) => {
+      if (cat.categorie == e) {
+        cat.selected = !cat.selected;
+        cat.selected == true
+          ? (cat.color = "primary")
+          : (cat.color = "secondary");
+      }
+    });
+
+    setCategories(categoriesCopy);
+
+    let selectedCategories = [];
+    categoriesCopy.forEach((cat) => {
+      if (cat.selected == true) {
+        selectedCategories.push(cat.categorie);
+      }
+    });
+
+    let picturesList = [];
+    metadataPictures.forEach((pic) => {
+      if (pic.categories.some((r) => selectedCategories.indexOf(r) >= 0)) {
+        picturesList.push(pic);
+      }
+    });
+    setPictures(picturesList);
+  };
+
+  const createPicture = (picture) => {
+    return <img srcset={"/images/" + picture.picture + " 5x"} />;
+  };
+  const createChip = (categorie) => {
+    if (categorie.selected == true) {
+      return (
+        <div>
+          <input
+            type="checkbox"
+            key={"categorie_" + categorie.categorie}
+            name={categorie.categorie}
+            onChange={() => handleClick(categorie.categorie)}
+            checked
+          />
+          {categorie.categorie}
+        </div>
+      );
+    } else {
+      return (
+        <div key={"categorie_" + categorie.categorie}>
+          <input
+            type="checkbox"
+            name={categorie.categorie}
+            onChange={() => handleClick(categorie.categorie)}
+          />
+          {categorie.categorie}
+        </div>
+      );
+    }
   };
 
   return (
     <div className={styles.categoriesOuterGrid}>
       <div></div>
       <div className={styles.categoriesGrid}>
-        {Array.from(categories, (c, i) => {
-          return (
-            <Chip
-              key={i}
-              label={"#" + c.categorie}
-              data-categorie={c.categorie}
-              className={styles.categorieChip}
-              onClick={handleClick}
-            />
-          );
-        })}
+        <div></div>
+        <div>{(categories || []).map((cat) => createChip(cat))}</div>
       </div>
-      <div></div>
+      <div>{(pictures || []).map((pic) => createPicture(pic))}</div>
     </div>
   );
 }
