@@ -3,6 +3,7 @@ import Chip from "@material-ui/core/Chip";
 import metadataPictures from "../../data/metadataPictures.json";
 import styles from "../../styles/Home.module.css";
 import DoneIcon from "@material-ui/icons/Done";
+import Image from "next/image";
 
 function Discover() {
   var [categories, setCategories] = React.useState([]);
@@ -61,7 +62,15 @@ function Discover() {
   };
 
   const createPicture = (picture) => {
-    return <img srcset={"/images/" + picture.picture + " 5x"} />;
+    return (
+      <Image
+        src={"/images/" + picture.picture}
+        layout="fill"
+        height="200"
+        width="100"
+        alt={picture.info}
+      />
+    );
   };
   const createChip = (categorie) => {
     if (categorie.selected == true) {

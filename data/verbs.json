@@ -55,8 +55,8 @@
     "they": "dají si"
   },
   {
-    "verb": "to go - walk",
-    "infinitiv": "jít",
+    "verb": "To go - walk",
+    "infinitiv": "Jít",
     "group": "irregular",
     "i": "jdu",
     "we": "jdeme",
@@ -64,5 +64,49 @@
     "youFormal": "jdete",
     "heShe": "Jde",
     "they": "jdou"
+  },
+  {
+    "verb": "To have",
+    "infinitiv": "Mít",
+    "group": "irregular",
+    "i": "mám",
+    "we": "máš",
+    "you": "má",
+    "youFormal": "máme",
+    "heShe": "máte",
+    "they": "mají"
+  },
+  {
+    "verb": "To be",
+    "infinitiv": "Být",
+    "group": "irregular",
+    "i": "jsem",
+    "we": "jsi",
+    "you": "je",
+    "youFormal": "jsme",
+    "heShe": "jste",
+    "they": "jsou"
+  },
+  {
+    "verb": "To go - Drive or ride",
+    "infinitiv": "Jet",
+    "group": "irregular",
+    "i": "jedu",
+    "we": "jedeš",
+    "you": "jede",
+    "youFormal": "jedeme",
+    "heShe": "jedete",
+    "they": "jedou"
+  },
+  {
+    "verb": "Can",
+    "infinitiv": "Moct",
+    "group": "irregular",
+    "i": "můžu",
+    "we": "můžeš",
+    "you": "může",
+    "youFormal": "můžeme",
+    "heShe": "můžete",
+    "they": "můžou"
   }
 ]
