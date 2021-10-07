@@ -65,7 +65,6 @@ function Discover() {
     return (
       <Image
         src={"/images/" + picture.picture}
-        layout="fill"
         height="200"
         width="100"
         alt={picture.info}
