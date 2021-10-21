@@ -108,5 +108,49 @@
     "youFormal": "můžeme",
     "heShe": "můžete",
     "they": "můžou"
+  },
+  {
+    "verb": "Can - be able",
+    "infinitiv": "Umět",
+    "group": "Irregular",
+    "i": "Umín",
+    "we": "Umíme",
+    "you": "Umíš",
+    "youFormal": "Umíte",
+    "heShe": "Umí",
+    "they": "Umí"
+  },
+  {
+    "verb": "Can - be able",
+    "infinitiv": "Chodit",
+    "group": "Irregular",
+    "i": "Chodím",
+    "we": "Chodíme",
+    "you": "Chodíš",
+    "youFormal": "Chodíte",
+    "heShe": "Chodí",
+    "they": "Chodí"
+  },
+  {
+    "verb": "Want",
+    "infinitiv": "Chtít",
+    "group": "Irregular",
+    "i": "Chci",
+    "we": "Chceme",
+    "you": "Chceš",
+    "youFormal": "Chcete",
+    "heShe": "Chce",
+    "they": "Chtějí"
+  },
+  {
+    "verb": "Must - have to",
+    "infinitiv": "Muset",
+    "group": "Irregular",
+    "i": "Musím",
+    "we": "Musíme",
+    "you": "Musíš",
+    "youFormal": "Musíte",
+    "heShe": "Musí",
+    "they": "Musí/musejí"
   }
 ]
