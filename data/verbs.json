@@ -112,7 +112,7 @@
   {
     "verb": "Can - be able",
     "infinitiv": "Umět",
-    "group": "Irregular",
+    "group": "irregular",
     "i": "Umín",
     "we": "Umíme",
     "you": "Umíš",
@@ -123,7 +123,7 @@
   {
     "verb": "Can - be able",
     "infinitiv": "Chodit",
-    "group": "Irregular",
+    "group": "irregular",
     "i": "Chodím",
     "we": "Chodíme",
     "you": "Chodíš",
@@ -134,7 +134,7 @@
   {
     "verb": "Want",
     "infinitiv": "Chtít",
-    "group": "Irregular",
+    "group": "irregular",
     "i": "Chci",
     "we": "Chceme",
     "you": "Chceš",
@@ -145,7 +145,7 @@
   {
     "verb": "Must - have to",
     "infinitiv": "Muset",
-    "group": "Irregular",
+    "group": "irregular",
     "i": "Musím",
     "we": "Musíme",
     "you": "Musíš",
