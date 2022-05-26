@@ -44,7 +44,7 @@
     "they": "studují"
   },
   {
-    "verb": "Study",
+    "verb": "Give yourself / Take yourself",
     "infinitiv": "Dát si",
     "group": "at",
     "i": "Dám si",
@@ -75,6 +75,17 @@
     "youFormal": "máme",
     "heShe": "máte",
     "they": "mají"
+  },
+  {
+    "verb": "Do",
+    "infinitiv": "Dělat",
+    "group": "irregular",
+    "i": "Dělam",
+    "we": "Děláme",
+    "you": "Dělaš",
+    "youFormal": "Děláte",
+    "heShe": "Dělá",
+    "they": "Dělají"
   },
   {
     "verb": "To be",
@@ -152,5 +163,27 @@
     "youFormal": "Musíte",
     "heShe": "Musí",
     "they": "Musí/musejí"
+  },
+  {
+    "verb": "Speak",
+    "infinitiv": "Mluvit",
+    "group": "irregular",
+    "i": "Mluvím",
+    "we": "Mluvíme",
+    "you": "Mluvíš",
+    "youFormal": "Mluví",
+    "heShe": "Mluví",
+    "they": "Mluví"
+  },
+  {
+    "verb": "Work",
+    "infinitiv": "Pracovat",
+    "group": "ovat",
+    "i": "Pracuju",
+    "we": "Pracujeme",
+    "you": "Pracuješ",
+    "youFormal": "Pracujete",
+    "heShe": "Pracuje",
+    "they": "Pracujou"
   }
 ]
